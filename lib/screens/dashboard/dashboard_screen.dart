@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:wys_app/common/const/colors.dart';
-import 'package:wys_app/screens/dashboard/blood_dashboard.dart';
-import 'package:wys_app/screens/dashboard/checkup_dashboard.dart';
+import 'package:wys_app/screens/dashboard/blood_subscreen.dart';
+import 'package:wys_app/screens/dashboard/checkup_subscreen.dart';
 
 import '../../components/appbar/app_bar_drawer.dart';
 import '../../components/appbar/my_app_bar.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

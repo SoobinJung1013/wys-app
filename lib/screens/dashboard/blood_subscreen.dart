@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:wys_app/common/const/colors.dart';
 import 'package:wys_app/components/calendar/calendar.dart';
-import 'package:wys_app/components/charts/line_chart.dart';
+import 'package:wys_app/components/charts/simple_line_chart.dart';
 
 import '../../components/bottomsheet/basic_bottom_sheet.dart';
+import '../../components/charts/group_bar_chart.dart';
+import '../../components/charts/range_annotation_line_chart.dart';
 
-class BloodChart extends StatelessWidget {
+class BloodChart extends StatefulWidget {
   const BloodChart({super.key});
 
   @override
+  State<BloodChart> createState() => _BloodChartState();
+}
+
+class _BloodChartState extends State<BloodChart> {
+
+
+  @override
   Widget build(BuildContext context) {
+    // bar chart data
+
+
     return Scaffold(
       backgroundColor: SECOND_COLOR,
       floatingActionButton: renderFloatingActionButton(context),
@@ -67,8 +79,9 @@ class BloodChart extends StatelessWidget {
                   ),
                 ],
               ),
-              child: LineChartWidget(),
+              child: GroupedBarChartWidget(),
             ),
+
             Padding(
               padding: const EdgeInsets.only(
                 top: 12.0,
@@ -97,7 +110,7 @@ class BloodChart extends StatelessWidget {
                   ),
                 ],
               ),
-              child: LineChartWidget(),
+              child: RangeAnnotationWidget(),
             ),
           ],
         ),

@@ -12,7 +12,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
   int selectedYear = DateTime.now().year;
   int selectedMonth = DateTime.now().month;
   int selectedDay = DateTime.now().day;
-  Color selectedColor = Colors.blue;
+  Color selectedColor = PRIMARY_COLOR; // 초기 선택 색상
 
   Future<void> _selectDate() async {
     final DateTime? pickedDate = await showDialog<DateTime>(
@@ -20,16 +20,18 @@ class _CalendarWidgetState extends State<CalendarWidget> {
       builder: (BuildContext context) {
         return Dialog(
           shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(10.0), // Adjust the value as desired
+            borderRadius: BorderRadius.circular(30.0),
           ),
-          child: CalendarDatePicker(
-            initialDate: DateTime(selectedYear, selectedMonth, 1),
-            firstDate: DateTime(selectedYear - 5),
-            lastDate: DateTime(selectedYear + 5),
-            onDateChanged: (DateTime? date) {
-              Navigator.of(context).pop(date);
-            },
+          child: Container(
+            color: SECOND_COLOR, // 원하는 배경색으로 변경
+            child: CalendarDatePicker(
+              initialDate: DateTime(selectedYear, selectedMonth, 1),
+              firstDate: DateTime(selectedYear - 5),
+              lastDate: DateTime(selectedYear + 5),
+              onDateChanged: (DateTime? date) {
+                Navigator.of(context).pop(date);
+              },
+            ),
           ),
         );
       },
@@ -56,7 +58,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              color: PRIMARY_COLOR,
+              color: selectedColor, // 선택한 색상 사용
             ),
           ),
         ),
@@ -64,7 +66,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
           onPressed: _selectDate,
           icon: Icon(Icons.calendar_today_sharp),
           iconSize: 30,
-          color: PRIMARY_COLOR,
+          color: selectedColor, // 선택한 색상 사용
         ),
       ],
     );

@@ -230,126 +230,197 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                       ),
                     ],
                   ),
                   SizedBox(height: 35),
-                  Column(
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 20.0, bottom: 10.0),
-                            child: Text(
-                              'Service',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 23,
-                                fontStyle: FontStyle.normal,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => DashboardScreen()),
-                          );
-                        },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width - 35,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            color: THIRD_COLOR,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.3),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: Offset(0, 3),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15.0),
-                                child: Text(
-                                  '혈당 차트',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(right: 30.0, top: 8.0),
-                                child: Image.asset('assets/images/heart.png'),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 30),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => FoodRecomendScreen()),
-                          );
-                        },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width - 35,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            color: THIRD_COLOR,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.3),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: Offset(0, 3),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15.0),
-                                child: Text(
-                                  '사료 추천',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(right: 30.0, top: 8.0),
-                                child: Image.asset('assets/images/food.png'),
-                              ),
-                            ],
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 20.0, bottom: 10.0),
+                        child: Text(
+                          'Service',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 23,
+                            fontStyle: FontStyle.normal,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: SingleChildScrollView(
+                        physics: AlwaysScrollableScrollPhysics(),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DashboardScreen()),
+                                  );
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width - 35,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    color: THIRD_COLOR,
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.3),
+                                        spreadRadius: 2,
+                                        blurRadius: 5,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15.0),
+                                        child: Text(
+                                          '혈당 차트',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      SizedBox(width: 10),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 30.0, top: 8.0),
+                                        child: Image.asset(
+                                            'assets/images/heart.png'),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 30),
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            FoodRecomendScreen()),
+                                  );
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width - 35,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    color: THIRD_COLOR,
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.3),
+                                        spreadRadius: 2,
+                                        blurRadius: 5,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15.0),
+                                        child: Text(
+                                          '사료 추천',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      SizedBox(width: 10),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 30.0, top: 8.0),
+                                        child:
+                                            Image.asset('assets/images/food.png'),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 30),
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DashboardScreen()),
+                                  );
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width - 35,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    color: THIRD_COLOR,
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.3),
+                                        spreadRadius: 2,
+                                        blurRadius: 5,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15.0),
+                                        child: Text(
+                                          '검진 차트',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      SizedBox(width: 10),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 30.0, top: 8.0),
+                                        child: Image.asset(
+                                            'assets/images/heart.png'),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
