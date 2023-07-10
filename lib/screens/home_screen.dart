@@ -266,7 +266,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => DashboardScreen()),
+                                        builder: (context) =>
+                                            DashboardScreen()),
                                   );
                                 },
                                 child: Container(
@@ -356,8 +357,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             right: 30.0, top: 8.0),
-                                        child:
-                                            Image.asset('assets/images/food.png'),
+                                        child: Image.asset(
+                                            'assets/images/food.png'),
                                       ),
                                     ],
                                   ),
@@ -371,7 +372,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => DashboardScreen()),
+                                        builder: (context) =>
+                                            DashboardScreen()),
                                   );
                                 },
                                 child: Container(

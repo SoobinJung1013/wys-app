@@ -68,8 +68,8 @@ class _BloodChartState extends State<BloodChart> {
               margin: EdgeInsets.all(16.0),
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                color: Colors.white, // 배경색
-                borderRadius: BorderRadius.circular(30.0), // 모서리 둥글게 설정
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30.0),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
@@ -100,7 +100,7 @@ class _BloodChartState extends State<BloodChart> {
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white, // 배경색
-                borderRadius: BorderRadius.circular(30.0), // 모서리 둥글게 설정
+                borderRadius: BorderRadius.circular(30.0),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),

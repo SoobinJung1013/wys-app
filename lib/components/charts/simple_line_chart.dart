@@ -53,7 +53,6 @@ class _LineChartWidgetState extends State<LineChartWidget> {
         domainFn: (TimeSeriesData data, _) => data.time,
         measureFn: (TimeSeriesData data, _) => data.value,
         data: data,
-        // colorFn: (_, __) => charts.ColorUtil.fromDartColor(PRIMARY_COLOR),
       )
     ];
   }

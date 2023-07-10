@@ -15,7 +15,6 @@ class FoodRecomendScreen extends StatelessWidget {
         title: '사료 추천',
       ),
       drawer: AppDrawer(),
-      // floatingActionButton: renderFloatingActionButton(context),
       body: Center(
         child: ListView.builder(
           padding: EdgeInsets.all(20),

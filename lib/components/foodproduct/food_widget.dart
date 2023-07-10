@@ -87,8 +87,6 @@ class FoodWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                      // width: imageWidth,
-                      // height: imageWidth,
                       width: imageWidth * 1.5,
                       height: imageWidth * 1.5,
                       child: Image.asset('assets/images/dog_food.png',

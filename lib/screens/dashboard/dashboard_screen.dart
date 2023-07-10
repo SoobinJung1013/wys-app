@@ -20,27 +20,26 @@ class _DashboardScreenState extends State<DashboardScreen> {
         title: 'Chart',
       ),
       drawer: AppDrawer(),
-      // floatingActionButton: renderFloatingActionButton(context),
       body: DefaultTabController(
         length: 2, // 탭의 개수
         child: Column(
           children: [
             Container(
               color: SECOND_COLOR,
-              // color: FOURTH_COLOR,// 배경색
+
               child: TabBar(
                 labelColor: Colors.white, // 글자색
                 labelStyle: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold
-                ), // 글자 크기// 글자 크기
+                ),
                 unselectedLabelColor: Colors.white70,
                 unselectedLabelStyle: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.normal,
-                ),// 선택되지 않은 글자색
-                indicatorColor: Colors.white, // 언더바 색상
-                indicatorWeight: 2.0, // 언더바 두께
+                ),
+                indicatorColor: Colors.white,
+                indicatorWeight: 2.0,
                 tabs: [
                   Tab(text: '혈당 차트'),
                   Tab(text: '검진 차트'),

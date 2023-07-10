@@ -20,8 +20,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     String email = _emailController.text;
     String password = _passwordController.text;
 
-    // Perform login logic here
-    // For now, we'll just print the email and password to the console
     print('Email: $email');
     print('Password: $password');
   }
@@ -110,9 +108,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             prefixIcon: Icon(Icons.person_outlined,
                                 color: PRIMARY_COLOR),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color:
-                                      PRIMARY_COLOR), // Change the underline color
+                              borderSide: BorderSide(color: PRIMARY_COLOR),
                             ),
                             labelStyle: TextStyle(color: PRIMARY_COLOR),
                           ),
@@ -129,9 +125,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             prefixIcon: Icon(Icons.phone_android_outlined,
                                 color: PRIMARY_COLOR),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color:
-                                      PRIMARY_COLOR), // Change the underline color
+                              borderSide: BorderSide(color: PRIMARY_COLOR),
                             ),
                             labelStyle: TextStyle(color: PRIMARY_COLOR),
                           ),
@@ -148,9 +142,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             prefixIcon: Icon(Icons.email_outlined,
                                 color: PRIMARY_COLOR),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color:
-                                      PRIMARY_COLOR), // Change the underline color
+                              borderSide: BorderSide(color: PRIMARY_COLOR),
                             ),
                             labelStyle: TextStyle(color: PRIMARY_COLOR),
                           ),
@@ -168,9 +160,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             prefixIcon: Icon(Icons.lock_clock_outlined,
                                 color: PRIMARY_COLOR),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color:
-                                      PRIMARY_COLOR), // Change the underline color
+                              borderSide: BorderSide(color: PRIMARY_COLOR),
                             ),
                           ),
                           obscureText: true,
@@ -200,12 +190,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                                30.0), // Set the desired corner radius
+                            borderRadius: BorderRadius.circular(30.0),
                           ),
                         ),
-                        minimumSize: MaterialStateProperty.all(Size(
-                            350.0, 50.0)), // Set the desired width and height
+                        minimumSize:
+                            MaterialStateProperty.all(Size(350.0, 50.0)),
                         backgroundColor:
                             MaterialStateProperty.all<Color>(PRIMARY_COLOR),
                         foregroundColor:
@@ -294,8 +283,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           shape:
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  30.0), // Set the desired corner radius
+                              borderRadius: BorderRadius.circular(30.0),
                             ),
                           ),
                         ),

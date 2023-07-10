@@ -11,7 +11,6 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: SECOND_COLOR,
         appBar: MyAppBar(title: 'Profile',),
         drawer: AppDrawer(),
-        // floatingActionButton: renderFloatingActionButton(context),
         body: Center(
           child: SingleChildScrollView(
             child: Column(

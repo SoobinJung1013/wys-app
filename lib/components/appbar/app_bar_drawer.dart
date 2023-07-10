@@ -25,7 +25,7 @@ class AppDrawer extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset(
-                      'assets/images/avatar.png', // 이미지 경로 수정 필요
+                      'assets/images/avatar.png',
                       width: 70,
                       height: 70,
                     ),
@@ -63,7 +63,6 @@ class AppDrawer extends StatelessWidget {
                               fontSize: 10,
                               fontWeight: FontWeight.normal,
                             ),
-
                           ),
                         ),
                       ],
@@ -74,7 +73,7 @@ class AppDrawer extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Container(
-                  width: 260, // 원하는 너비 값으로 설정
+                  width: 260,
                   child: TextField(
                     decoration: InputDecoration(
                       filled: true,

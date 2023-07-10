@@ -10,14 +10,12 @@ class RangeAnnotationWidget extends StatefulWidget {
 }
 
 class _RangeAnnotationWidgetState extends State<RangeAnnotationWidget> {
-  // range annotation line chart data
   final List<TimeSeriesSales> data = generateData();
   final List<charts.RangeAnnotationSegment<DateTime>> annotations =
       generateAnnotations();
 
   @override
   Widget build(BuildContext context) {
-    // range line data
     final seriesList = [
       charts.Series<TimeSeriesSales, DateTime>(
         id: 'Sales',
